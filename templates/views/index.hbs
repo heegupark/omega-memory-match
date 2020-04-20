@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{title}}</title>
+  <link rel="icon" href="">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="main-content">
+    {{>header}}
+    <div class="resultParas">
+      {{!-- <h2>{{title}}</h1> --}}
+        <h3>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell
+          you if your guess was too high or too low.
+      </h2>
+      <label for="guessField">Enter a guess: </label>
+      <input type="text" id="guessField" class="guessField">
+      <input type="submit" value="Submit guess" class="guessSubmit">
+      <p class="guesses"></p>
+      <p class="lastResult"></p>
+      <p class="lowOrHi"></p>
+    </div>
+  </div>
+
+  {{>footer}}
+
+  <script src="js/app.js"></script>
+</body>
+</html>
