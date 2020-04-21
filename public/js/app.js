@@ -103,7 +103,6 @@ function checkGuess() {
   }
   count[guessCount - 1].textContent = guessCount + 'st'
   answer[guessCount-1].textContent = userGuess
-  // guesses.textContent += userGuess + ' '
 
   if (userGuess === randomNumber) {
     lastResult.textContent = 'Congratulations! You got it right!'
@@ -137,23 +136,17 @@ function checkGuess() {
 function setGameOver() {
   guessField.disabled = true;
   guessSubmit.disabled = true;
-  // resetButton = document.createElement('button');
   startButton.textContent = 'Start New Game'
-  // document.body.append(resetButton);
-  // startButton.addEventListener('click', resetGame);
 }
 
 function resetGame() {
   guessCount = 1
-
-  // var reset = document.querySelectorAll('.result p')
 
   for (let i = 0; i < count.length; i++) {
     count[i].textContent = ''
     answer[i].textContent = ''
   }
 
-  // resetButton.parentNode.removeChild(resetButton);
   startButton.textContent = 'Start'
 
   DisableGuessField(false)
@@ -162,9 +155,6 @@ function resetGame() {
 
   lastResult.style.backgroundColor = 'white'
   lastResult.textContent = ''
-  // randomNumber = Math.floor(Math.random() * 100) + 1;
-  console.log(Number(minValue.textContent))
-  console.log(Number(maxValue.textContent))
+
   randomNumber = Math.floor(Math.random() * (Number(maxValue.textContent) - Number(minValue.textContent)) + Number(minValue.textContent) + 1)
-  console.log(randomNumber)
 }
