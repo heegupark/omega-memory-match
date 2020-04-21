@@ -22,17 +22,19 @@ body {
 
 input {
   text-align: center;
-  height: 20px;
+  height: 25px;
   margin: auto;
   font-size: 14px;
   border: 1px solid black;
+  border-radius: 3px;
 }
 
 button {
   font-size: 12px;
-  height: 25px;
+  height: 30px;
   margin: auto;
   background-color: white;
+  border-radius: 3px;
 }
 
 .minMinusButton, .maxMinusButton {
