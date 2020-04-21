@@ -1,10 +1,10 @@
 html {
   font-family: 'Baloo Bhaina 2', cursive;
-  line-height: 1.7rem;
+  line-height: 1.5rem;
 }
 
 body {
-  width: 60%;
+  width: 50%;
   margin: 50px auto;
   text-align: center;
   font-size: 18px;
@@ -44,6 +44,10 @@ b {
   color: crimson;
 }
 
+.last-result {
+  height: 25px;
+}
+
 .min-container > label, .max-container > label, .guess-container > label  {
   text-align: right;
   margin: auto;
@@ -69,7 +73,7 @@ b {
   width: 100%;
   max-width: 1250px;
   margin: auto;
-  height: 600px;
+  height: 75vh;
 }
 
 .start-over > button {
@@ -90,16 +94,20 @@ b {
 
 @media screen and (max-width: 768px) {
   body {
-    width: 90%;
-    font-size: 14px;
+    width: 95%;
+    font-size: 12px;
+    line-height: 1rem;
   }
 
   button {
     font-size: 8px;
   }
+
+  b {
+  font-size: 16px;
+  color: crimson;
 }
-
-
+}
 
 /* The switch - the box around the slider */
 .switch {
@@ -140,11 +148,11 @@ b {
 }
 
 input:checked + .slider {
-  background-color: black;
+  background-color: rgb(32, 32, 32);
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px black;
+  box-shadow: 0 0 1px rgb(32, 32, 32);
 }
 
 input:checked + .slider:before {

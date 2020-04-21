@@ -114,18 +114,12 @@ function checkGuess() {
     lastResult.textContent = '!!!GAME OVER!!!'
     setGameOver();
   } else {
-    lastResult.textContent = 'Wrong!'
-    lastResult.style.color = 'red'
+    // lastResult.textContent = 'Wrong!'
+    lastResult.style.color = 'crimson'
     if (userGuess < randomNumber) {
-      setTimeout(() => {
-        msg.textContent = ''
-      }, 2000)
-      msg.textContent = 'Higher than that!'
+      lastResult.textContent = 'Higher than that!'
     } else if (userGuess > randomNumber) {
-      setTimeout(() => {
-        msg.textContent = ''
-      }, 2000)
-      msg.textContent = 'Lower than that!'
+      lastResult.textContent = 'Lower than that!'
     }
   }
 
@@ -148,12 +142,12 @@ function resetGame() {
   }
 
   startButton.textContent = 'Start'
+  guesses.textContent = ''
 
   disableGuessField(false)
   guessField.value = ''
   guessField.focus()
 
-  lastResult.style.backgroundColor = 'white'
   lastResult.textContent = ''
   randomNumber = Math.floor(Math.random() * (Number(maxValue.textContent) - Number(minValue.textContent)) + Number(minValue.textContent) + 1)
 }
