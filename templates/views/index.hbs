@@ -5,22 +5,97 @@
   <title>{{title}}</title>
   <link rel="icon" href="">
   <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap" rel="stylesheet">
 </head>
 
 <body>
+  {{>header}}
   <div class="main-content">
-    {{>header}}
-    <div class="resultParas">
+    <div class="result">
       {{!-- <h2>{{title}}</h1> --}}
-        <h3>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell
-          you if your guess was too high or too low.
-      </h2>
-      <label for="guessField">Enter a guess: </label>
-      <input type="text" id="guessField" class="guessField">
-      <input type="submit" value="Submit guess" class="guessSubmit">
-      <p class="guesses"></p>
-      <p class="lastResult"></p>
-      <p class="lowOrHi"></p>
+      <div class="main-container">
+        <h3>Omega has selected a random number between <b class="min">0</b> and <b class="max">100</b>.</h3>
+        <h3>Guess the number in 10 turns or fewer.</h3>
+        <h3>You'll be notified if your guess was too high or too low.</h3>
+        <div class="line">
+          <hr>
+        </div>
+        <div class="msg-container row">
+          <p class="msg"></p>
+        </div>
+
+        <div class="min-container row">
+          <div class="offset-2"></div>
+          <label for="minValue" class="col-2">Min: </label>
+          <p id="minValue" class="minValue col-4">0</p>
+          <button type="submit" id="minMinusButton" class="minButton col-1">-10</button>
+          <button type="submit" id="minPlusButton" class="minButton col-1">+10</button>
+          <div class="offset-2"></div>
+        </div>
+
+        <div class="max-container row">
+          <div class="offset-2"></div>
+          <label for="minValue" class="col-2">Max: </label>
+          <p id="maxValue" class="maxValue col-4">100</p>
+          <button type="submit" id="maxMinusButton" class="maxButton col-1">-10</button>
+          <button type="submit" id="maxPlusButton" class="maxButton col-1">+10</button>
+          <div class="offset-2"></div>
+        </div>
+
+        <div class="start-over row">
+          <button class="start">Start</button>
+        </div>
+
+        <div class="guess-container row">
+          <div class="offset-1"></div>
+          <label for="guessField" class="col-3">Enter a guess: </label>
+          <input type="text" id="guessField" class="guessField col-4">
+          <button type="submit" class="guessSubmit col-2">Submit</button>
+          <div class="offset-2"></div>
+        </div>
+        <div class="result-container">
+          <div class="result-box row">
+            <div class="guess-text col-2">
+              <p class="guesses"></p>
+            </div>
+            <div class="guess-attempt col-10">
+              <table>
+                <thead>
+                  <tr>
+                    <th class="count1" id="count1"></th>
+                    <th class="count2" id="count2"></th>
+                    <th class="count3" id="count3"></th>
+                    <th class="count4" id="count4"></th>
+                    <th class="count5" id="count5"></th>
+                    <th class="count6" id="count6"></th>
+                    <th class="count7" id="count7"></th>
+                    <th class="count8" id="count8"></th>
+                    <th class="count9" id="count9"></th>
+                    <th class="count10" id="count10"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="answer1" id="answer1"></td>
+                    <td class="answer2" id="answer2"></td>
+                    <td class="answer3" id="answer3"></td>
+                    <td class="answer4" id="answer4"></td>
+                    <td class="answer5" id="answer5"></td>
+                    <td class="answer6" id="answer6"></td>
+                    <td class="answer7" id="answer7"></td>
+                    <td class="answer8" id="answer8"></td>
+                    <td class="answer9" id="answer9"></td>
+                    <td class="answer10" id="answer10"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="result-box row">
+            <p class="lastResult col-12"></p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
