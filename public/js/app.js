@@ -101,13 +101,13 @@ function updateMinMax(target, number) {
 function checkGuess() {
   let userGuess = Number(guessField.value)
   if (guessCount === 1) {
-    guesses.textContent = 'Previous guesses: '
+    guesses.textContent = 'Previous'
   }
   count[guessCount - 1].textContent = guessCount + 'st'
   answer[guessCount-1].textContent = userGuess
 
   if (userGuess === randomNumber) {
-    lastResult.textContent = 'Congratulations! You got it right!'
+    lastResult.textContent = 'Congratulations!'
     lastResult.style.color = 'green'
     setGameOver();
   } else if (guessCount === 10) {

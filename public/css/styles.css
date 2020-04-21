@@ -7,7 +7,7 @@ body {
   width: 50%;
   margin: 50px auto;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .dark-mode {
@@ -15,9 +15,14 @@ body {
   color: white;
 }
 
+.dark-mode-title {
+  font-size: 14px;
+  line-height: 1rem;
+}
+
 input {
   text-align: center;
-  height: 25px;
+  height: 20px;
   margin: auto;
   font-size: 14px;
   border: 1px solid black;
@@ -25,7 +30,7 @@ input {
 
 button {
   font-size: 12px;
-  height: 30px;
+  height: 25px;
   margin: auto;
 }
 
@@ -49,7 +54,7 @@ b {
 }
 
 .min-container > label, .max-container > label, .guess-container > label  {
-  text-align: right;
+  /* text-align: right; */
   margin: auto;
 }
 
@@ -60,7 +65,8 @@ b {
 .msg {
   color: coral;
   margin: auto;
-  height: 30px;
+  height: 20px;
+  margin-top: 5px;
 }
 
 .minValue, .maxValue {
@@ -73,7 +79,7 @@ b {
   width: 100%;
   max-width: 1250px;
   margin: auto;
-  height: 75vh;
+  height: 70vh;
 }
 
 .start-over > button {
@@ -89,8 +95,12 @@ b {
 
 .guesses {
   margin: auto;
+  padding-top: 10px;
 }
 
+th, td {
+  font-size: 14px;
+}
 
 @media screen and (max-width: 768px) {
   body {
@@ -104,17 +114,21 @@ b {
   }
 
   b {
-  font-size: 16px;
-  color: crimson;
-}
+    font-size: 14px;
+    color: crimson;
+  }
+
+  th, td {
+    font-size: 10px;
+  }
 }
 
 /* The switch - the box around the slider */
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 45px;
+  height: 24px;
 }
 
 /* Hide default HTML checkbox */
@@ -139,10 +153,10 @@ b {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
   background-color: white;
   transition: .4s;
 }
@@ -156,7 +170,7 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  transform: translateX(26px);
+  transform: translateX(20px);
 }
 
 /* Rounded sliders */
