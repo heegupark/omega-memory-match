@@ -28,8 +28,8 @@
           <div class="offset-2"></div>
           <label for="minValue" class="col-2">Min: </label>
           <p id="minValue" class="minValue col-4">0</p>
-          <button type="submit" id="minMinusButton" class="minButton col-1">-10</button>
-          <button type="submit" id="minPlusButton" class="minButton col-1">+10</button>
+          <button type="submit" id="minMinusButton" class="minMinusButton col-1">-10</button>
+          <button type="submit" id="minPlusButton" class="minPlusButton col-1">+10</button>
           <div class="offset-2"></div>
         </div>
 
@@ -37,8 +37,8 @@
           <div class="offset-2"></div>
           <label for="minValue" class="col-2">Max: </label>
           <p id="maxValue" class="maxValue col-4">100</p>
-          <button type="submit" id="maxMinusButton" class="maxButton col-1">-10</button>
-          <button type="submit" id="maxPlusButton" class="maxButton col-1">+10</button>
+          <button type="submit" id="maxMinusButton" class="maxMinusButton col-1">-10</button>
+          <button type="submit" id="maxPlusButton" class="maxPlusButton col-1">+10</button>
           <div class="offset-2"></div>
         </div>
 
@@ -54,6 +54,9 @@
           <div class="offset-2"></div>
         </div>
         <div class="result-container">
+          <div class="result-box row">
+            <p class="lastResult col-12"></p>
+          </div>
           <div class="result-box row">
             <div class="guess-text col-2">
               <p class="guesses"></p>
@@ -91,10 +94,14 @@
               </table>
             </div>
           </div>
-          <div class="result-box row">
-            <p class="lastResult col-12"></p>
-          </div>
         </div>
+      </div>
+      <div>
+        <p>Dark Mode</p>
+        <label class="switch">
+          <input type="checkbox" class="dark-mode">
+          <span class="slider round"></span>
+        </label>
       </div>
     </div>
   </div>

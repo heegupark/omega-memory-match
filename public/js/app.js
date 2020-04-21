@@ -29,35 +29,37 @@ var guessCount = 1
 var resetButton
 var startButton = document.querySelector('.start')
 
+var darkMode = document.querySelector('.dark-mode')
+
 startButton.addEventListener('click', resetGame)
 
 guessSubmit.addEventListener('click', checkGuess)
 
 minMinusButton.addEventListener('click', () => {
-  DisableGuessField(true)
+  disableGuessField(true)
   updateMinMax('min', Number(minValue.textContent) + Number(minMinusButton.textContent))
 })
 
 minPlusButton.addEventListener('click', () => {
-  DisableGuessField(true)
+  disableGuessField(true)
   if (checkMinValidation()) {
     updateMinMax('min', Number(minValue.textContent) + Number(minPlusButton.textContent))
   }
 })
 
 maxMinusButton.addEventListener('click', () => {
-  DisableGuessField(true)
+  disableGuessField(true)
   if (checkMaxValidation()) {
     updateMinMax('max', Number(maxValue.textContent) + Number(maxMinusButton.textContent))
   }
 })
 
 maxPlusButton.addEventListener('click', () => {
-  DisableGuessField(true)
+  disableGuessField(true)
   updateMinMax('max', Number(maxValue.textContent) + Number(maxPlusButton.textContent))
 })
 
-function DisableGuessField(isDisplay) {
+function disableGuessField(isDisplay) {
   guessField.disabled = isDisplay
   guessSubmit.disabled = isDisplay
 }
@@ -106,25 +108,24 @@ function checkGuess() {
 
   if (userGuess === randomNumber) {
     lastResult.textContent = 'Congratulations! You got it right!'
-    lastResult.style.backgroundColor = 'green'
+    lastResult.style.color = 'green'
     setGameOver();
   } else if (guessCount === 10) {
     lastResult.textContent = '!!!GAME OVER!!!'
     setGameOver();
   } else {
     lastResult.textContent = 'Wrong!'
-    lastResult.style.color = 'white'
-    lastResult.style.backgroundColor = 'red'
+    lastResult.style.color = 'red'
     if (userGuess < randomNumber) {
       setTimeout(() => {
         msg.textContent = ''
       }, 2000)
-      msg.textContent = 'Last guess was too low!'
+      msg.textContent = 'Higher than that!'
     } else if (userGuess > randomNumber) {
       setTimeout(() => {
         msg.textContent = ''
       }, 2000)
-      msg.textContent = 'Last guess was too high!'
+      msg.textContent = 'Lower than that!'
     }
   }
 
@@ -134,8 +135,7 @@ function checkGuess() {
 }
 
 function setGameOver() {
-  guessField.disabled = true;
-  guessSubmit.disabled = true;
+  disableGuessField(true)
   startButton.textContent = 'Start New Game'
 }
 
@@ -149,12 +149,18 @@ function resetGame() {
 
   startButton.textContent = 'Start'
 
-  DisableGuessField(false)
+  disableGuessField(false)
   guessField.value = ''
   guessField.focus()
 
   lastResult.style.backgroundColor = 'white'
   lastResult.textContent = ''
-
   randomNumber = Math.floor(Math.random() * (Number(maxValue.textContent) - Number(minValue.textContent)) + Number(minValue.textContent) + 1)
+}
+
+darkMode.addEventListener('click', darkModeToggle)
+
+function darkModeToggle() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
 }
