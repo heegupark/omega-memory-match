@@ -15,23 +15,29 @@ app.set('view engine', 'hbs')
 app.set('views', viewsPath)
 hbs.registerPartials(partialsPath)
 
+let sitename = 'heegu.net'
 let name = 'Omegathrone'
+let subtitle = 'Omegathorne makes'
 
 // Setup static directory to serve
 app.use(express.static(publicDirectoryPath))
 
 app.get('', (req, res) => {
   res.render('index', {
+    sitename,
     title: 'Omega Guessing Game',
-    name: name
+    name,
+    subtitle
   })
 })
 
 app.get('*', (req, res) => {
   res.render('404', {
+    sitename,
     title: 'Error 404',
     name: name,
-    errorMessage: 'Page not found.'
+    errorMessage: 'Page not found.',
+    subtitle
   })
 })
 
