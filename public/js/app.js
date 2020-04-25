@@ -422,12 +422,12 @@ function calculateAccuracy(attempts, matches) {
 }
 
 // Sound
-bgMusic = new sound('./assets/audio/bg-music.wav', true)
-cardMouseOverSound = new sound('./assets/audio/mouse-over.wav', false)
-successSound = new sound('./assets/audio/success.wav', false)
-failSound = new sound('./assets/audio/fail.wav', false)
-cardFlipSound = new sound('./assets/audio/card-flip.wav', false)
-clickSound = new sound('./assets/audio/click.wav', false)
+bgMusic = new sound('audio/bg-music.wav', true)
+cardMouseOverSound = new sound('udio/mouse-over.wav', false)
+successSound = new sound('audio/success.wav', false)
+failSound = new sound('audio/fail.wav', false)
+cardFlipSound = new sound('audio/card-flip.wav', false)
+clickSound = new sound('audio/click.wav', false)
 
 var soundToggle = document.querySelectorAll('.sound-toggle')
 var soundControl = document.querySelector('.sound-control')
