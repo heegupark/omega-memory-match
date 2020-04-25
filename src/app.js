@@ -25,7 +25,7 @@ app.use(express.static(publicDirectoryPath))
 app.get('', (req, res) => {
   res.render('index', {
     sitename,
-    title: 'Omega Guessing Game',
+    title: 'Artistic Flower Memory Match Game',
     name,
     subtitle
   })

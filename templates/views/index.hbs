@@ -2,104 +2,125 @@
 <html>
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{title}}</title>
   <link rel="icon" href="img/o-logo.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-
-<body>
-  {{>header}}
-  <div class="main-container">
-    <div class="result">
-      {{!-- <h2>{{title}}</h1> --}}
-      <div class="description">
-        <h3>Omega has selected a random number between <b class="min">0</b> and <b class="max">100</b>.</h3>
-        <h3>Guess the number in 10 turns or fewer.</h3>
-        <h3>You'll be notified if your guess was too high or too low.</h3>
-        <div class="line">
-          <hr>
+<body class="bg-img">
+  <div class="container">
+    <div class="row row-header">
+      <header class="col-12">
+        <h1>Memory Match - Artistic Flower</h1>
+      </header>
+    </div>
+    <div class="row row-body">
+      <div class="aside-top">
+        <div class="box-top">
+          <p class="top-games-played">Games Played</p>
         </div>
-        <div class="msg-container row">
-          <p class="msg"></p>
+        <div class="row box-top">
+          <p class="top-games-played-result" id="games-played-top">0</p>
         </div>
-
-        <div class="min-container row">
-          <div class="offset-1"></div>
-          <label for="minValue" class="col-2">Min: </label>
-          <p id="minValue" class="minValue col-4">0</p>
-          <button type="submit" id="minMinusButton" class="minMinusButton col-2">-10</button>
-          <button type="submit" id="minPlusButton" class="minPlusButton col-2">+10</button>
-          <div class="offset-1"></div>
+        <div class="row box-top">
+          <p class="top-attempts">Attempts</p>
         </div>
-
-        <div class="max-container row">
-          <div class="offset-1"></div>
-          <label for="minValue" class="col-2">Max: </label>
-          <p id="maxValue" class="maxValue col-4">100</p>
-          <button type="submit" id="maxMinusButton" class="maxMinusButton col-2">-10</button>
-          <button type="submit" id="maxPlusButton" class="maxPlusButton col-2">+10</button>
-          <div class="offset-1"></div>
+        <div class="row box-top">
+          <p class="top-attempts-result" id="attempts-top">0</p>
         </div>
-
-        <div class="start-over row">
-          <button class="start">Start</button>
+        <div class="row box-top">
+          <p class="top-accuracy">Accuracy</p>
         </div>
-
-        <div class="guess-container row">
-          <div class="offset-1"></div>
-          <label for="guessField" class="col-2">Enter: </label>
-          <input type="number" id="guessField" class="guessField col-4">
-          <button type="submit" class="guessSubmit col-4">Submit</button>
-          <div class="offset-1"></div>
+        <div class="row box-top">
+          <p class="top-accuracy-result" id="accuracy-top">0</p>
         </div>
-        <div class="result-container">
-          <div class="result-box row">
-            <p class="lastResult col-12"></p>
-          </div>
-          <div class="result-box row">
-            <div class="guess-text col-2">
-              <p class="guesses"></p>
-            </div>
-            <div class="guess-attempt col-10">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="count1" id="count1"></th>
-                    <th class="count2" id="count2"></th>
-                    <th class="count3" id="count3"></th>
-                    <th class="count4" id="count4"></th>
-                    <th class="count5" id="count5"></th>
-                    <th class="count6" id="count6"></th>
-                    <th class="count7" id="count7"></th>
-                    <th class="count8" id="count8"></th>
-                    <th class="count9" id="count9"></th>
-                    <th class="count10" id="count10"></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="answer1" id="answer1"></td>
-                    <td class="answer2" id="answer2"></td>
-                    <td class="answer3" id="answer3"></td>
-                    <td class="answer4" id="answer4"></td>
-                    <td class="answer5" id="answer5"></td>
-                    <td class="answer6" id="answer6"></td>
-                    <td class="answer7" id="answer7"></td>
-                    <td class="answer8" id="answer8"></td>
-                    <td class="answer9" id="answer9"></td>
-                    <td class="answer10" id="answer10"></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+      </div>
+      <aside class="aside-side col-1">
+        <div class="row box-aside">
+          <p class="aside-stats">Stats</p>
+        </div>
+        <div class="row box-aside">
+          <p class="aside-games-played">Games Played</p>
+        </div>
+        <div class="row box-aside">
+          <p class="aside-games-played-result" id="games-played-side">0</p>
+        </div>
+        <div class="row box-aside">
+          <p class="aside-attempts">Attempts</p>
+        </div>
+        <div class="row box-aside">
+          <p class="aside-attempts-result" id="attempts-side">0</p>
+        </div>
+        <div class="row box-aside">
+          <p class="aside-accuracy">Accuracy</p>
+        </div>
+        <div class="row box-aside">
+          <p class="aside-accuracy-result" id="accuracy-side">0</p>
+        </div>
+      </aside>
+      <main id="gameCards" class="col-10">
+      </main>
+      <div class="col-1"></div>
+    </div>
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-10">
+        <div class="main-menu-box">
+          <button class="theme-change theme-change-btn">Theme</button>
+          <button class="level-change level-change-btn">Level</button>
+          <button class="sound-control sound-control-btn">Sound: <span class="soundOnOff">OFF</span></button>
+        </div>
+      </div>
+      <div class="col-1"></div>
+    </div>
+    <div id="modal" class="modal">
+      <div class="modal-win">
+        <p class="modal-message">Congratulations! You have won!</p>
+        <button class="play-again">Play Again?</button>
+        <button class="change-theme theme-change-btn">Change Theme</button>
+        <button class="change-level level-change-btn">Change Level</button>
+        <div class="sound-toggle-container">
+          <span class="sound-toggle-title">Sound</span>
+          <label class="switch">
+            <input type="checkbox" class="sound-toggle sound-toggle-again">
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+      <div class="modal-theme">
+        <p class="modal-message">Choose you theme</p>
+        <button class="theme-btn theme-vangogh">VanGogh</button>
+        <button class="theme-btn theme-graffiti">Graffiti</button>
+        <button class="theme-btn theme-picasso">Picasso</button>
+        <div class="sound-toggle-container">
+          <span class="sound-toggle-title">Sound</span>
+          <label class="switch">
+            <input type="checkbox" class="sound-toggle sound-toggle-theme">
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+      <div class="modal-level">
+        <p class="modal-message">Select Level</p>
+        <button class="level-btn">Beginner</button>
+        <button class="level-btn">Easy</button>
+        <button class="level-btn">Intermediate</button>
+        <button class="level-btn">Hard</button>
+        <button class="level-btn">Expert</button>
+        <div class="sound-toggle-container">
+          <span class="sound-toggle-title">Sound</span>
+          <label class="switch">
+            <input type="checkbox" class="sound-toggle sound-toggle-level">
+            <span class="slider round"></span>
+          </label>
         </div>
       </div>
     </div>
   </div>
-
   {{>footer}}
   <script src="js/app.js"></script>
 </body>
