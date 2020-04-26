@@ -17,6 +17,15 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: gold;
+}
+
 h1 {
   font-size: 48px;
   font-weight: 400;

@@ -67,13 +67,13 @@ for (var i = 0; i < levelBtn.length; i++) {
     modal.style.display = 'none'
     modalLevel.style.display = 'none'
     modalTheme.style.display = 'none'
+    resetGame()
     startGame(theme)
   })
 }
 
 for (var i = 0; i < levelChangeBtn.length; i++) {
   levelChangeBtn[i].addEventListener('click', function () {
-    resetCards()
     modalWin.style.display = 'none'
     modal.style.display = 'block'
     modalLevel.style.display = 'block'
@@ -125,13 +125,11 @@ for (var i = 0; i < themeBtn.length; i++) {
         document.body.style.backgroundImage = 'url(img/background-pic.jpg)'
         break;
     }
-
   })
 }
 
 for (var i = 0; i < themeChangeBtn.length; i++) {
   themeChangeBtn[i].addEventListener('click', function () {
-    resetCards()
     modalWin.style.display = 'none'
     modal.style.display = 'block'
     modalTheme.style.display = 'block'
@@ -164,8 +162,8 @@ function startGame(theme) {
 
 function resetGame() {
   matches = 0
-  // attempts = 0
-  // accuracy = 0
+  attempts = 0
+  accuracy = 0
   // gamesPlayed++
   updateStats()
 }
@@ -180,16 +178,6 @@ function updateStats() {
   displayStats(attemptsObjSide, attempts, changedFontColor)
   displayStats(accuracyObjSide, calculateAccuracy(attempts, matches) + ' %', 'orange')
 
-}
-
-function resetCards() {
-  matches = 0
-  var hiddenCards = document.querySelectorAll('.card-back')
-  for (var i = 0; i < hiddenCards.length; i++) {
-    if (hiddenCards[i]) {
-      hiddenCards[i].classList.remove('hidden')
-    }
-  }
 }
 
 // Card playing
@@ -313,7 +301,6 @@ function shuffle(array) {
 }
 
 function setLevel(level) {
-
   switch (level) {
     case 'beginner':
       iMax = 2
