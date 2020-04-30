@@ -17,7 +17,7 @@ hbs.registerPartials(partialsPath)
 
 let sitename = 'heegu.net'
 let name = 'Omegathrone'
-let subtitle = 'Omegathorne makes'
+let subtitle = 'Omegathrone makes'
 
 // Setup static directory to serve
 app.use(express.static(publicDirectoryPath))

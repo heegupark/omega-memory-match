@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{title}}</title>
+  <title>{{sitename}} - {{title}}</title>
   <link rel="icon" href="img/o-logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;500;600;700;800&display=swap"
@@ -12,11 +12,12 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-img">
+  {{>header}}
   <div class="container">
     <div class="row row-header">
-      <header class="col-12">
+      <div class="col-12">
         <h1>Memory Match - Artistic Flower</h1>
-      </header>
+      </div>
     </div>
     <div class="row row-body">
       <div class="aside-top">

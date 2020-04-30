@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  height: 97vh;
+  height: 95vh;
   background-color: black;
   /* background-image: url('../images/background.gif'); */
   background-image: url(../img/background.gif);
@@ -15,6 +15,21 @@ body {
   background-size: cover;
   text-align: center;
   margin: 0;
+}
+
+.heegu-header {
+  position: absolute;
+  margin-left: 5px;
+}
+
+.heegu > a {
+  font-size: 20px;
+  color: gold;
+  text-shadow: 1px 1px 1px black;;
+}
+
+.heegu > a:hover {
+  color: silver;
 }
 
 a {
@@ -118,6 +133,10 @@ button {
   color: gold;
   border-color: gold;
  }
+
+footer, .heegu-footer {
+  color: white;
+}
 
 /* card effect */
 .get-bigger:hover {
