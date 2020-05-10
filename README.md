@@ -4,7 +4,7 @@
 
 
 ## Functionality Overview
-1. This is a simple matching game in which a player attempts to match the images contained on "playing cards". - Clicking to flip cards, Checking the matching cards, Checking the win condition, Suffling cards, Resetting the game and so on
+1. This is a simple matching game in which a player attempts to match the images contained on "playing cards". - Clicking to flip cards, Checking the matching cards, Checking the win condition, Shuffling cards, Resetting the game, and Dynamically creating the game board.
 2. There are 5 different levels and 3 different themes.
     - Levels: Beginner(2 total matches), Easy(3 total matches), Intermediate(4 total matches), Hard(6 total matches), Expert(9 total matches) - Eash to add more levels
     - Themes: Van Gogh style theme, Graffiti style theme, Picasso style theme - Easy to add more themes
