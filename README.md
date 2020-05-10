@@ -15,7 +15,7 @@
 6. Fun sound effects with on/off function
 
 ## Planned Features
-1. Basic memory matching game with 9 pairs of cards - Click to flip cards, Check the matching cards, Check the win condition, Suffle cards, Resetting the game
+1. Basic memory matching game with 9 pairs of cards - Click to flip cards, Check the matching cards, Check the win condition, Shuffle cards, Resetting the game
 2. Displaying stats - games played, attempts, accuracy
 3. Mobile responsibility - iPhone 6/7/8 - Landscape/Portrait, iPad - Landscape/Portrait
 
