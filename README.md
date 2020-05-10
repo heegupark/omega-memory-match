@@ -21,7 +21,7 @@
 
 ## Lessons Learned
 1. Various applications and usage of JavaScript DOM functions for dynamically creation of cards
-2. CSS Media queries for mobile responsibilities and interactive web pages
+2. CSS Media queries for mobile responsiveness and interactive web pages
 3. JavaScript Object Oriented Programming for better functionalities and to increase the re-usage of codes
 4. Experience from the very beginning to complete product - Planning, Development, Implementation, Deployment, Publishing 
 
